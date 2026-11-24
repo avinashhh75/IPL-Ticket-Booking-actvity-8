@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IPL 2026 - Ticket Booking</title>
+
+    <!-- CSS Connection -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+
+        <div class="logo">
+            IPL 2026
+        </div>
+
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="main-nav">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav id="main-nav">
+            <a href="#home">Home</a>
+            <a href="#matches">Matches</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#booking">Booking</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+
+        <div class="hero-content">
+
+            <h1>Welcome to IPL 2026</h1>
+
+            <p>
+                Experience the excitement of cricket.
+                Book your favourite IPL match tickets now!
+            </p>
+
+            <a href="#booking" class="hero-btn">
+                Book Tickets
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Match Cards Section -->
+    <section class="matches" id="matches">
+
+        <h2>Popular IPL Matches</h2>
+
+        <div class="match-controls">
+            <label for="teamFilter">Filter by team</label>
+            <select id="teamFilter">
+                <option value="all">All teams</option>
+                <option value="RCB">Royal Challengers Bengaluru (RCB)</option>
+                <option value="CSK">Chennai Super Kings (CSK)</option>
+                <option value="MI">Mumbai Indians (MI)</option>
+                <option value="KKR">Kolkata Knight Riders (KKR)</option>
+                <option value="SRH">Sunrisers Hyderabad (SRH)</option>
+                <option value="DC">Delhi Capitals (DC)</option>
+            </select>
+
+            <div class="view-controls" role="group" aria-label="Match card view">
+                <button type="button" class="view-toggle is-active" data-view="grid" aria-pressed="true">Grid</button>
+                <button type="button" class="view-toggle" data-view="list" aria-pressed="false">List</button>
+            </div>
+        </div>
+
+        <div class="match-container">
+
+            <!-- Match 1 -->
+            <div class="match-card" data-teams="RCB CSK">
+
+                <h3>RCB vs CSK</h3>
+
+                <p>Royal Challengers Bengaluru vs Chennai Super Kings</p>
+
+                <p>Date: 20 December 2026</p>
+
+                <p>Time: 7:30 PM</p>
+
+                <a href="booking.html" class="book-btn">Book Now</a>
+
+            </div>
+
+
+            <!-- Match 2 -->
+            <div class="match-card" data-teams="MI KKR">
+
+                <h3>MI vs KKR</h3>
+
+                <p>Mumbai Indians vs Kolkata Knight Riders</p>
+
+                <p>Date: 22 December 2026</p>
+
+                <p>Time: 7:30 PM</p>
+
+                <a href="#booking">Book Now</a>
+
+            </div>
+
+
+            <!-- Match 3 -->
+            <div class="match-card" data-teams="SRH DC">
+
+                <h3>SRH vs DC</h3>
+
+                <p>Sunrisers Hyderabad vs Delhi Capitals</p>
+
+                <p>Date: 24 December 2026</p>
+
+                <p>Time: 7:30 PM</p>
+
+                <a href="#booking">Book Now</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Match Schedule Cards -->
+    <section class="schedule" id="schedule">
+
+        <h2>IPL Match Schedule</h2>
+
+        <div class="schedule-grid">
+            <article class="schedule-card">
+                <p class="schedule-date">20 Dec 2026</p>
+                <h3>RCB vs CSK</h3>
+                <p><strong>Time:</strong> 7:30 PM</p>
+                <p><strong>Venue:</strong> Bengaluru</p>
+            </article>
+            <article class="schedule-card">
+                <p class="schedule-date">22 Dec 2026</p>
+                <h3>MI vs KKR</h3>
+                <p><strong>Time:</strong> 7:30 PM</p>
+                <p><strong>Venue:</strong> Mumbai</p>
+            </article>
+            <article class="schedule-card">
+                <p class="schedule-date">24 Dec 2026</p>
+                <h3>SRH vs DC</h3>
+                <p><strong>Time:</strong> 7:30 PM</p>
+                <p><strong>Venue:</strong> Hyderabad</p>
+            </article>
+        </div>
+
+    </section>
+
+
+    <!-- Booking Form -->
+    <section class="booking" id="booking">
+        
+
+        <h2>Ticket Booking Form</h2>
+
+       <form id="bookingForm">
+
+            <label for="name">Full Name:</label>
+
+            <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                required
+            >
+
+
+            <label for="email">Email:</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+            >
+
+
+            <label for="phone">Phone Number:</label>
+
+            <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="Enter phone number"
+                pattern="[0-9]{10}"
+                required
+            >
+
+
+            <label for="match">Select Match:</label>
+
+            <select id="match" name="match" required>
+
+                <option value="">Select Match</option>
+                <option>RCB vs CSK</option>
+                <option>MI vs KKR</option>
+                <option>SRH vs DC</option>
+
+            </select>
+
+
+           <label for="stand">Stand Category:</label>
+            <select id="stand" required>
+                <option value="">Select Stand</option>
+                <option value="1000">General - ₹1000</option>
+                <option value="2000">Premium - ₹2000</option>
+                <option value="3000">VIP - ₹3000</option>
+            </select>
+
+
+            <label for="tickets">Number of Tickets:</label>
+
+            <input
+                type="number"
+                id="tickets"
+                name="tickets"
+                min="1"
+                max="10"
+                required
+            >
+            <label>Booking Preference:</label>
+            
+
+<div class="radio-group">
+
+    <input type="radio"
+           id="online"
+           name="preference"
+           value="Online"
+           required>
+    <label for="online">Online</label>
+
+    <input type="radio"
+           id="counter"
+           name="preference"
+           value="Counter">
+    <label for="counter">Counter</label>
+
+</div>
+
+
+
+            <button type="submit">
+                Submit Booking
+            </button>
+
+            <button type="reset" class="reset-btn">
+                Reset
+            </button>
+
+        </form>
+
+    </section>
+  <section class="booking-summary" id="bookingSummary"
+        style="display: none;">
+
+        <h2>Booking Summary</h2>
+
+        <p>
+            <strong>Full Name:</strong>
+            <span id="sName"></span>
+        </p>
+
+        <p>
+            <strong>Email:</strong>
+            <span id="sEmail"></span>
+        </p>
+
+        <p>
+            <strong>Phone Number:</strong>
+            <span id="sPhone"></span>
+        </p>
+
+        <p>
+            <strong>Selected Match:</strong>
+            <span id="sMatch"></span>
+        </p>
+
+        <p>
+            <strong>Stand Category:</strong>
+            <span id="sStand"></span>
+        </p>
+
+        <p>
+            <strong>Number of Tickets:</strong>
+            <span id="sTickets"></span>
+        </p>
+
+        <p>
+            <strong>Booking Preference:</strong>
+            <span id="sPreference"></span>
+        </p>
+
+        <h3>
+            Total Amount: ₹<span id="sTotal">0</span>
+        </h3>
+
+        <button type="button" onclick="confirmBooking()">
+            Confirm Booking
+        </button>
+        <!-- Booking Confirmation Popup -->
+<div id="confirmationModal" class="confirmation-overlay">
+
+    <div class="confirmation-box">
+
+        <div class="success-icon">✓</div>
+
+        <h2>Booking Confirmed</h2>
+
+        <p>
+            Thank you for confirming your booking.
+            You are safe to close this window.
+        </p>
+
+        <button onclick="undoConfirmation()">
+            Undo Confirmation
+        </button>
+
+    </div>
+</div>
+        
+
+    </section>
+    <section class="guidelines">
+    <h2>Stadium Guidelines</h2>
+    <div class="guideline-grid">
+        <article class="guideline-card">
+            <h3>Safety</h3>
+            <ul>
+                <li>Weapons and sharp objects</li>
+                <li>Fireworks and crackers</li>
+            </ul>
+        </article>
+        <article class="guideline-card">
+            <h3>Food &amp; Beverages</h3>
+            <ul>
+                <li>Outside food and beverages</li>
+                <li>Glass bottles and cans</li>
+                <li>Alcohol and illegal substances</li>
+            </ul>
+        </article>
+        <article class="guideline-card">
+            <h3>Equipment &amp; Bags</h3>
+            <ul>
+                <li>Professional cameras without permission</li>
+                <li>Large bags and backpacks</li>
+            </ul>
+        </article>
+    </div>
+ </section>
+
+
+    <!-- Footer -->
+    <footer id="contact">
+
+        <h3>IPL 2026 Ticket Booking</h3>
+
+        <p>Book your favourite match tickets online.</p>
+
+        <p>Contact: support@iplticketbooking.com</p>
+
+        <p>© 2026 IPL Ticket Booking. All Rights Reserved.</p>
+
+    </footer>
+ <script src="app.js"></script>
+
+</body>
+
+</html>
